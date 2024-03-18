@@ -35,7 +35,7 @@ export const ButtonLink = ({
           size={"sm"}
           variant={variant}
           className={cn(
-            "rounded-full outline-none border-none px-4 font-semibold text-base md:text-md",
+            "rounded-full outline-none border-none px-4 py-2 font-semibold text-base md:text-md",
             color,
             className
           )}

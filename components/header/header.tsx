@@ -48,7 +48,7 @@ export const Header = () => {
     <header
       className={`w-full min-h-10  ${
         isSticky
-          ? "sticky top-0 right-0 left-0 z-50 bg-primary-foreground duration-300"
+          ? "sticky top-0 right-0 left-0 z-50 bg-primary-foreground shadow-sm shadow-gray-300 dark:shadow-gray-600 duration-300"
           : "bg-main"
       }`}
     >
@@ -102,7 +102,7 @@ export const Header = () => {
             </div>
           </ul>
           <div
-            className={`hidden lg:flex items-center gap-x-3 md:gap-x-4 font-medium text-lg ${
+            className={`hidden lg:flex items-center gap-x-3 md:gap-x-5 font-medium text-lg ${
               isSticky ? "text-muted-foreground" : ""
             }`}
           >
@@ -114,7 +114,8 @@ export const Header = () => {
             <ButtonLink
               label="My Dashboard"
               href="/dashboard"
-              // variant={"custom"}
+              variant={"custom"}
+              className="shadow-gray-500 shadow-sm dark:hover:bg-slate-700 duration-300"
             />
             <ThemeSwitch className="cursor-pointer" />
           </div>

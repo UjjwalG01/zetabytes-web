@@ -28,7 +28,7 @@ const faqs = [
   },
 ];
 
-const socialMedias = [
+export const socialMedias = [
   { img: fb, link: "/facebook" },
   { img: x, link: "/x.com" },
   { img: linkedin, link: "/linkedin" },
@@ -37,10 +37,10 @@ const socialMedias = [
 
 export const FaqSection = () => {
   return (
-    <div className="w-full my-12 lg:my-12">
+    <section className="w-full my-12 lg:my-12">
       <div className="container">
         <div className="flex flex-col items-center justify-center space-y-4 lg:space-y-8">
-          <span className="section-title relative z-50">FAQs Section</span>
+          <span className="section-title relative z-10">FAQs Section</span>
           <h2 className="font-semibold text-3xl text-center">
             Do you have any questions?
           </h2>
@@ -80,6 +80,6 @@ export const FaqSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

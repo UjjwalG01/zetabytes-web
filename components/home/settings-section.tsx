@@ -1,5 +1,8 @@
 import { CreditCard, Mail, User, Users, icons } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+
+import bg_image from "@/public/about-bg.png";
 
 interface SettingsCardProps {
   title: string;
@@ -30,14 +33,17 @@ const AnimatedCard = ({ title, subtitle, Icon, href }: SettingsCardProps) => {
 
 export const SettingsSection: React.FC = () => {
   return (
-    <div className="w-full h-full my-12">
+    <section className="w-full h-full my-8 py-12 bg-slate-200 dark:bg-slate-800/80">
       <div className="container flex flex-col items-center space-y-4 justify-center py-12">
-        <span className="section-title relative z-10 text-xl font-semibold mb-2">
-          Settings
+        <span className="section-title relative z-10 text-xl pl-3 font-semibold mb-2">
+          Clients
         </span>
         <h2 className="font-semibold text-3xl text-center">
-          Get connected with Us on
+          We are Trusted Globally by Millions of Clients
         </h2>
+        <p className="text-base font-medium text-muted-foreground">
+          Nothing is going to stop our business.
+        </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 w-full">
           <AnimatedCard
             title="Account"
@@ -65,6 +71,6 @@ export const SettingsSection: React.FC = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

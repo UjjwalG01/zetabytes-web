@@ -25,7 +25,7 @@ const numbers = [
 
 export const NumbersSection = () => {
   return (
-    <div className="w-full h-full mb-12">
+    <section className="w-full h-full mb-12">
       <div className="flex items-center justify-center py-12 container">
         <Card className="space-y-4 grid sm:grid-cols-2 md:grid-cols-3 justify-center w-full py-8 px-4 gap-4 rounded-2xl shadow-md dark:shadow-slate-200 dark:bg-slate-700">
           {numbers.map((num) => (
@@ -49,6 +49,6 @@ export const NumbersSection = () => {
           ))}
         </Card>
       </div>
-    </div>
+    </section>
   );
 };

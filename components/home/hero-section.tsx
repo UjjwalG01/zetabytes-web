@@ -8,7 +8,7 @@ import background from "@/app/_assets/background.svg";
 
 export const HeroSection = () => {
   return (
-    <section className="w-full bg-main text-white">
+    <section className="w-full min-h-screen bg-main text-white">
       {/* <Image alt="" src={background} /> */}
       <div className="container h-full space-y-14">
         <div className="h-full flex flex-col items-center space-y-2 md:space-y-4 mt-6 justify-center text-center">
@@ -26,7 +26,11 @@ export const HeroSection = () => {
 
         <div className="flex gap-x-4 items-center justify-center pb-6">
           <Link href={"/"}>
-            <Button size={"lg"} className="text-lg">
+            <Button
+              size={"lg"}
+              className="text-lg rounded-full"
+              variant={"custom"}
+            >
               Enroll Internships
             </Button>
           </Link>

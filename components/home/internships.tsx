@@ -50,7 +50,7 @@ const internships = [
 
 export const Internships = () => {
   return (
-    <div className="w-full my-12 lg:my-12">
+    <section className="w-full my-12 lg:my-12">
       <div className="container">
         <div className="flex flex-col items-center justify-center space-y-6">
           <span className="section-title relative z-10">Our Internships</span>
@@ -74,6 +74,6 @@ export const Internships = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

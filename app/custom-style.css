@@ -1,4 +1,4 @@
-.hero-cta:hover:after {
+/* .hero-cta:hover:after {
   content: "";
   width: 20rem;
   height: 5.5rem;
@@ -7,17 +7,21 @@
   top: -0px;
   left: 0px;
   transition: all 0.4s;
+} */
+
+.common-section {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
 }
 
-.about-section {
-  background-image: url("../src/images/who-we-are/background.jpg");
+.about-banner {
+  /* background-image: url("@/public/about-bg.png"); */
   object-fit: cover;
   background-size: cover;
   background-position: center center;
   width: 100%;
   height: 100%;
-}
-
-.section-title {
-  @apply text-base text-muted-foreground font-semibold;
 }

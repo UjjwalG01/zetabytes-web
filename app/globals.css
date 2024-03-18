@@ -6,12 +6,17 @@ html,
 body,
 :root {
   height: 100%;
+  --main-color: #3559e0;
+  --dark-main-color: #2d4cbb;
 }
 
 /* Custom Stylings */
 .bg-main {
-  background-color: #3559e0;
-  color: #f9f6ff;
+  @apply bg-[var(--main-color)] text-[#f9f6ff] dark:bg-[var(--dark-main-color)];
+}
+
+.bg-neutral {
+  @apply bg-slate-200 dark:bg-slate-800/80;
 }
 
 .container {
@@ -25,19 +30,26 @@ body,
   @apply text-base text-gray-50 font-semibold;
 }
 
+.bg-head {
+  @apply bg-[var(--main-color)] dark:bg-[var(--dark-main-color)];
+}
+
+.bg-image {
+  width: 100%;
+  min-height: 40vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/white-bg.jpg");
+  background-attachment: fixed;
+}
+
 .section-title::before {
   content: url("./_assets/title-bg.svg");
-  /* width: 50%;
-  height: 50%; */
   color: #424874;
   position: absolute;
   z-index: -10;
   top: -0.4rem;
   left: -3.2rem;
-}
-
-.bg-gradient {
-  @apply bg-gradient-to-b from-[#3559e0];
 }
 
 @layer base {

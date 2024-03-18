@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export const FeatureSection = () => {
   return (
-    <div className="w-full h-full my-6">
+    <section className="w-full h-full my-6">
       <div className="flex items-center justify-center py-12 bg-slate-200 dark:bg-slate-800/80">
         <div className="container grid md:grid-cols-2 ">
           <div className=" flex-1">
@@ -42,6 +42,6 @@ export const FeatureSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

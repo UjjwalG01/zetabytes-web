@@ -1,21 +1,32 @@
 import Image from "next/image";
 
-import landing from "@/public/landing.jpg";
+import landing from "@/public/about.png";
 
 import { Button } from "../ui/button";
 
 export const HeroEndSection = () => {
   return (
-    <div className="w-full py-8 relative">
-      <div className="container grid lg:grid-cols-[2fr_5fr] gap-x-4 my-4 space-y-6 rounded-lg ">
+    <section className="w-full py-8 relative">
+      <div className="container grid lg:grid-cols-2 gap-x-4 my-4 gap-y-6 rounded-lg relative">
+        <div className="w-full max-h-[23rem] relative ml-auto overflow-hidden rounded-lg">
+          <Image
+            src={landing}
+            alt="Landing Image"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        </div>
         <div className="flex-1 my-6">
-          <div className="flex flex-col  gap-y-3 lg:gap-y-4 |relative items-center justify-center text-center">
+          <div className="flex flex-col gap-y-3 lg:gap-y-4 | relative items-center justify-center text-center">
             {/* <SectionTitle /> */}
             <h2 className={`section-title relative z-10`}>About Us</h2>
             <h1 className="font-semibold text-3xl">Project Mangement</h1>
             <p className="text-base lg:text-lg font-medium">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-              accusantium voluptate repudiandae.
+              accusantium voluptate repudiandae. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Soluta, cumque cupiditate. Non qui
+              nulla vel eaque, eius incidunt culpa id delectus cupiditate esse?
             </p>
             <Button
               variant={"secondary"}
@@ -26,14 +37,7 @@ export const HeroEndSection = () => {
             </Button>
           </div>
         </div>
-        <div className="w-full ml-auto overflow-hidden rounded-lg">
-          <Image
-            src={landing}
-            alt="Landing Image"
-            className="rounded-lg w-full"
-          />
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
