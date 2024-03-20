@@ -39,8 +39,9 @@ body,
   min-height: 40vh;
   background-position: center;
   background-size: cover;
-  background-image: url("/white-bg.jpg");
+  /* background-image: url("/gray-texture.jpg"); */
   background-attachment: fixed;
+  background-blend-mode: darken;
 }
 
 .section-title::before {

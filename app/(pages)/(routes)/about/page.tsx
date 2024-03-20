@@ -3,6 +3,7 @@ import { AboutLandingSection } from "@/components/about/about-landing";
 import { MissionSection } from "@/components/about/mission-section";
 import { ProgressBarSection } from "@/components/about/progress-bar-section";
 import { BehindCompanySection } from "@/components/about/behind-company";
+import { OurGoalsSection } from "@/components/about/our-goal-section";
 
 const AboutPage = () => {
   return (
@@ -12,6 +13,7 @@ const AboutPage = () => {
       <MissionSection />
       <ProgressBarSection />
       <BehindCompanySection />
+      <OurGoalsSection />
     </main>
   );
 };

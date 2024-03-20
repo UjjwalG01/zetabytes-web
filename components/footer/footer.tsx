@@ -19,7 +19,7 @@ export const Footer = () => {
                 src={logo}
               />
             </Link>
-            <p className="text-base font-medium">
+            <p className="text-base font-medium text-muted-foreground">
               We're a team of strategic creator and digital innovator, united
               focus in our pursuit of mastery and joyful.
             </p>
