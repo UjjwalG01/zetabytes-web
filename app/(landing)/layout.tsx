@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "../globals.css";
 import "../custom-style.css";
 
+import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AnimatedLayout } from "@/components/animated-layout";
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AnimatedLayout>{children}</AnimatedLayout>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
