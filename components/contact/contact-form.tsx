@@ -24,6 +24,8 @@ import {
   FormLabel,
   FormMessage,
 } from "../ui/form";
+import { ContactLocationSection } from "./contact-location";
+import { ContactInput } from "./contact-input";
 
 export const ContactFormSection = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -45,9 +47,9 @@ export const ContactFormSection = () => {
   return (
     <section className="my-12">
       <div className="container relative">
-        <div className="grid grid-cols-[2fr_2fr] gap-4">
+        <div className="grid lg:grid-cols-2 gap-y-8 lg:gap-4">
           <div className="w-full">
-            <Card className=" shadow-md p-12">
+            <Card className=" shadow-md p-4 sm:p-6 xl:p-12">
               <CardHeader className="flex flex-col gap-y-2">
                 <CardTitle className="text-4xl">Send us a Message</CardTitle>
                 <CardDescription className="font-semibold text-muted-foreground text-red-500">
@@ -61,7 +63,7 @@ export const ContactFormSection = () => {
                       onSubmit={form.handleSubmit(onSubmit)}
                       className="w-full space-y-6"
                     >
-                      <FormField
+                      {/* <FormField
                         control={form.control}
                         name="name"
                         render={({ field }) => (
@@ -82,69 +84,34 @@ export const ContactFormSection = () => {
                             <FormMessage />
                           </FormItem>
                         )}
-                      />
-                      <FormField
+                      /> */}
+                      <ContactInput
+                        name="name"
+                        label="Full Name"
+                        placeholder="Your Full Name"
                         control={form.control}
+                        isRequired={true}
+                      />
+                      <ContactInput
                         name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-lg font-medium">
-                              Phone Number
-                              <span className="text-red-500 font-semibold ml-1 text-lg">
-                                *
-                              </span>
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Your phone number"
-                                className="h-12 text-muted-foreground font-medium resize-none"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
+                        label="Phone Number"
+                        placeholder="Your Phone Number"
                         control={form.control}
+                        isRequired={true}
+                      />
+                      <ContactInput
                         name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-lg font-medium">
-                              Email
-                              <span className="text-red-500 font-semibold ml-1 text-lg">
-                                *
-                              </span>
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Your Email Address"
-                                className="h-12 text-muted-foreground font-medium resize-none"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
+                        label="Email"
+                        placeholder="Your Email Address"
                         control={form.control}
+                        isRequired={true}
+                      />
+                      <ContactInput
                         name="subject"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-lg font-medium">
-                              Subject
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Your Subject"
-                                className="h-12 text-muted-foreground font-medium resize-none"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
+                        label="Subject"
+                        placeholder="Your Subject"
+                        control={form.control}
+                        isRequired={false}
                       />
                       <FormField
                         control={form.control}
@@ -173,7 +140,9 @@ export const ContactFormSection = () => {
               </CardContent>
             </Card>
           </div>
-          <aside>Aside</aside>
+          <aside className="w-full">
+            <ContactLocationSection />
+          </aside>
         </div>
       </div>
     </section>

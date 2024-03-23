@@ -7,3 +7,9 @@ export const formSchema = z.object({
   subject: z.string().min(3, "Subject is required!"),
   message: z.string()!,
 });
+
+export const CONTACT = {
+  email: "contact@gmail.com",
+  phone: "(+977) 9812435353",
+  location: "Chabahil, Kathmandu 44600 Nepal",
+};

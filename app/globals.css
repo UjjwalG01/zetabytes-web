@@ -12,7 +12,11 @@ body,
 
 /* Custom Stylings */
 .bg-main {
-  @apply bg-[var(--main-color)] text-[#f9f6ff] dark:bg-[var(--dark-main-color)];
+  @apply bg-main-light text-[#f9f6ff] dark:bg-main-dark;
+}
+
+.text-main {
+  @apply dark:text-main-light text-main-dark;
 }
 
 .bg-neutral {
@@ -31,7 +35,7 @@ body,
 }
 
 .bg-head {
-  @apply bg-[var(--main-color)] dark:bg-[var(--dark-main-color)];
+  @apply bg-main-light dark:bg-main-dark;
 }
 
 .bg-image {

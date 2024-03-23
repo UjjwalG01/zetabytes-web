@@ -8,7 +8,7 @@ import { socialMedias } from "../home/faq-section";
 
 export const Footer = () => {
   return (
-    <footer className="w-full h-full mt-4">
+    <footer className="w-full h-full">
       <div className="flex flex-col items-center justify-center py-6 lg:py-10 shadow bg-slate-300 dark:bg-slate-800/80">
         <div className="container grid gap-y-2 gap-x-4 md:grid-cols-[2fr_1fr] lg:grid-cols-[2fr_1fr_1fr_2fr]">
           <div className="flex flex-col items-center text-center md:items-start md:text-start gap-y-3 py-2 md:order-1 lg:order-1">
