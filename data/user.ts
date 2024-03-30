@@ -4,7 +4,7 @@ export const getUserByEmail = async (email: string) => {
     try {
         const user = await db.user.findUnique({ where: { email } })
         return user;
-    } catch (err: any) {
+    } catch (error: any) {
         return null;
     }
 }
@@ -13,7 +13,7 @@ export const getUserById = async (id: string) => {
     try {
         const user = await db.user.findUnique({ where: { id } })
         return user;
-    } catch (err: any) {
+    } catch (error: any) {
         return null;
     }
 }
