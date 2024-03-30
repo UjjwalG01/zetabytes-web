@@ -88,8 +88,8 @@ export const Header = () => {
               }`}
             >
               <div className="flex items-center gap-x-3 font-medium text-md md:text-lg ">
-                <Link href={"register"} className="whitespace-nowrap">
-                  Sign Up
+                <Link href={"login"} className="whitespace-nowrap">
+                  Sign In
                 </Link>
                 <ThemeSwitch className="cursor-pointer" />
               </div>
@@ -106,9 +106,9 @@ export const Header = () => {
               isSticky ? "text-muted-foreground" : ""
             }`}
           >
-            <Link href={"register"}>
+            <Link href={"login"}>
               <div className="font-medium text-md md:text-lg block whitespace-nowrap">
-                Sign Up
+                Sign In
               </div>
             </Link>
             <ButtonLink
