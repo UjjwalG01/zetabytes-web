@@ -40,8 +40,8 @@ export const Header = () => {
     { link: "About", href: "about" },
     { link: "Internship", href: "internship" },
     { link: "Services", href: "services" },
+    { link: "Startups", href: "startups" },
     { link: "Contact", href: "contact" },
-    { link: "FAQs", href: "faqs" },
   ];
 
   return (
