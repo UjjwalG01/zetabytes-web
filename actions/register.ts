@@ -1,12 +1,14 @@
 "use server"
 
 import * as z from "zod";
-import bcrypt from "bcryptjs"
+// import bcrypt from "bcryptjs"
+const bcrypt = require("bcryptjs");
 
 import { db } from "@/lib/db";
 
 import { RegisterSchema } from "@/schemas";
 import { getUserByEmail } from "@/data/user";
+import { generateVerificationToken } from "@/lib/tokens";
 
 export const register = async (values: z.infer<typeof RegisterSchema>) => {
     // validating the client data into server
@@ -34,7 +36,8 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
         }
     });
 
+    const verificationEmail = await generateVerificationToken(email);
     // TODO: send verification email
 
-    return { success: "User created successfully!" }
+    return { success: "Verification token sent!" }
 }

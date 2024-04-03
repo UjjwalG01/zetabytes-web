@@ -12,8 +12,9 @@ interface SocialProps {
 }
 
 export const Social = ({ label }: SocialProps) => {
-  const onClick = (provider: "google" | "github") => {
-    signIn(provider, {
+  const onClick = async (provider: "google" | "github") => {
+    await signIn(provider, {
+      redirect: false,
       callbackUrl: DEFAULT_LOGIN_REDIRECT,
     });
     console.log("logged in");
