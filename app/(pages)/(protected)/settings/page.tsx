@@ -1,5 +1,7 @@
 import { auth, signOut } from "@/auth";
 
+export const runtime = "edge";
+
 const SettingsPage = async () => {
   const session = await auth();
   return (
